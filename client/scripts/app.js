@@ -5,7 +5,7 @@ $(function() {
 //to all messages sent by the user
     server: '/classes/messages',
     username: 'anonymous',
-    roomname: 'lobby',
+    roomname: 'Lobby',
     lastMessageId: 0,
     friends: {},
 
@@ -109,7 +109,7 @@ $(function() {
       }
     },
     populateRooms: function(results) {
-      app.$roomSelect.html('<option value="__newRoom">New room...</option><option value="" selected>Lobby</option></select>');
+      app.$roomSelect.html('<option value="__newRoom">New room...</option></select>');
 
       if (results) {
         var rooms = {};
