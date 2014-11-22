@@ -7,7 +7,7 @@ module.exports = {
   messages: {
     get: function (callback) {db.get('messages', '', callback)}, // a function which produces all the messages
     post: function (messageObj, callback) {
-      var queryTemplate = "(user, room, text, date) values ('{{user}}', '{{room}}','{{text}}'," + new Date().getTime().toString()+ ")";
+      var queryTemplate = "(username, roomname, text, date) values ('{{username}}', '{{roomname}}','{{text}}'," + new Date().getTime().toString()+ ")";
       var queryString = must.render(queryTemplate, messageObj);
       db.set('messages', queryString, callback);
     } // a function which can be used to insert a message into the database
